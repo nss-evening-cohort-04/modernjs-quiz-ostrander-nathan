@@ -3,10 +3,43 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Modern Quiz</title>
-	<link rel="stylesheet" href="">
+	<title>Modern Quiz	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	
+<div class="allContent">
+	<div id="robotModels1">
+		<h2>Robot Models1</h2>
+		<select multiple class="form-control">\
+		  <option>1</option>
+		  <option>2</option>
+		  <option>3</option>
+		  <option>4</option>
+		  <option>5</option>
+		  <option>6</option>
+		</select>			
+	</div>
+	<div id="robotModels2">
+		<h2>Robot Models2</h2>
+		<select multiple class="form-control">\
+		  <option>1</option>
+		  <option>2</option>
+		  <option>3</option>
+		  <option>4</option>
+		  <option>5</option>
+		  <option>6</option>
+		</select>			
+	</div>
+	<br>
+	<button id="attackButton" class="btn btn-default" type="submit">Attack</button>
+
+	<div class="panel panel-default" id="outputBattle">
+	    <div class="panel-body">Battle Results Here!</div>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
+<script src="/javascripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="/javascripts/robotClasses.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
