@@ -1,5 +1,15 @@
+//Event listeners for robots and attack 
+  $("#robotModels1").click(function(){
+    alert( "Handler for Robots1");
+});
 
+    $("#robotModels2").click(function(){
+    alert( "Handler for Robots2");
+});
 
+$("#attackButton").click(function(){
+	alert("attack button clicked");
+});
 
 
 

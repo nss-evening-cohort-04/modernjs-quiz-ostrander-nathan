@@ -1,6 +1,13 @@
 .allContent {
-	width: 25%;
-	margin-left: 20%;
+	width: auto;
 	margin-top: 20px;
-
+	display: block;
+	padding: 10px;
+}
+#attackButton {
+	background-color: red;
+	margin-left: 40%;
+	margin-bottom: 15px;
+	width: 200px;
+	padding: 20px;
 }
