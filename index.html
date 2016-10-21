@@ -9,38 +9,31 @@
 </head>
 <body>
 <div class="allContent">
-	<div id="robotModels1">
-		<h2>Robot Model 1</h2>
-		<select multiple class="form-control">\
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
-		  <option>6</option>
-		</select>			
-	</div>
-		<h1>VS</h1>
-	<div id="robotModels2">
-		<h2>Robot Model 2</h2>
-		<select multiple class="form-control">\
-		  <option>1</option>
-		  <option>2</option>
-		  <option>3</option>
-		  <option>4</option>
-		  <option>5</option>
-		  <option>6</option>
-		</select>			
-	</div>
-	<br>
-	<button id="attackButton" class="btn btn-default" type="submit">Attack</button>
+  <div class="RedTeam">
+    <h2>Red Robot Team</h2>
+    <input type="text" id="txt_nameRed">
+      <select multiple class="form-control" id="robotModels1">
+    </select>
+    <br>
+  </div>
+  <h2>VS</h2>
+  <div class="BlueTeam">
+    <h2>Blue Robot Team</h2>
+    <input type="text" id="txt_nameBlue"><br>
+    	<select multiple class="form-control" id="robotModels2">
+    </select>
+    <br>
+  </div>
+  
+  <button id="attackButton" class="btn btn-default" type="submit">Attack</button>
 
-	<div class="panel panel-default" id="outputBattle">
-	    <div class="panel-body">Battle Results Here!</div>
-	</div>
+  <div class="panel panel-default" id="outputBattle">
+    <div class="panel-body">Battle Results Here!</div>
+  </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
-<script src="/javascripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
 <script src="/javascripts/robotClasses.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="/javascripts/weapons.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="/javascripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

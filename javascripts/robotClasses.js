@@ -1,52 +1,92 @@
+"use strict";
+var RobotBattle = RobotBattle || {};
+RobotBattle.Fighters = {};
+
+// A base Robot function.
+RobotBattle.Fighters.PlayerClass = function() {
+  this.name = "BaseRobot";
+  this.healthBonus = 0;
+  this.strengthBonus = 0;
+  this.baseDamage = Math.floor(Math.random() * 10);
+
+
+  this.toString = function() {
+    return this.name;
+  };
+};
+
 // Define three robot type functions (e.g. Drone, Bipedal, ATV).
+// Each type must have a unique property, for example, if it is aerial or ground based.
 // Aerial Drone Prototypes
-function AerialDrone() {
+RobotBattle.Fighters.AerialDrone = function() {
 	this.type = "Drone";
   	this.attackType = "Aerial";
-}
+};
+RobotBattle.Fighters.AerialDrone.prototype = new RobotBattle.Fighters.PlayerClass();
 
-function AlphaAerial() {
-	this.baseDamage = Math.floor(Math.random() * 31) + 50;
-}
-AlphaDrone.prototype = new AerialDrone();
 
-function BetaAerial() {
-	this.baseDamage = Math.floor(Math.random() * 61) + 60;
-}
-BetaDrone.prototype = new AerialDrone();
-// Ground Drone Prototypes
-function GroundDrone() {
-	this.type = "Bipedal";
-	this.attackType = "Ground";
-}
-
-function AlphaGround() {
-	this.baseDamage = Math.floor(Math.random() * 31) + 50;
-}
-AlphaGround.prototype = new GroundDrone();
-
-function BetaGround() {
-	this.baseDamage = Math.floor(Math.random() * 61) + 60;
-}
-BetaGround.prototype = new GroundDrone();
-// Water  Drone Prototypes
-function WaterDrone (){
-	this.type = "ATV";
-	this.attackType = "Water";
-}
-function AlphaWater() {
-	this.baseDamage = Math.floor(Math.random() * 31) + 50;	
-}
-AlphaWater.prototype = new WaterDrone();
-
-function BetaWater() {
-	this.baseDamage = Math.floor(Math.random() * 61) + 60;
-}
-BetaWater.prototype = new WaterDrone();
-// A base Robot function.
-// Each type must have a unique property, for example, if it is aerial or ground based.
 // Define at least 2 specific robot model functions for each type.
+RobotBattle.Fighters.AlphaAerial = function() {
+	this.name = "Alpha Aerial";
 // Give each robot model a different range of health. For example, one model can have health range of 50-80, and another one will have a range of 60-120. 
 // To accomplish this, read about the Math.random() function in JavaScript.
+	this.healthRange = Math.floor(Math.random() * 31) + 50;
 // Give each robot model a different range of damage they do using the same technique.
+	this.baseDamage += 10;
+};
+RobotBattle.Fighters.AlphaAerial.prototype = new RobotBattle.Fighters.AerialDrone();
+
+RobotBattle.Fighters.BetaAerial = function() {
+	this.name = "Beta Aerial";
+	this.healthRange = Math.floor(Math.random() * 61) + 60;
+	this.baseDamage += 5;
+};
+RobotBattle.Fighters.BetaAerial.prototype = new RobotBattle.Fighters.AerialDrone();
+// Ground Drone Prototypes
+RobotBattle.Fighters.GroundDrone = function() {
+	this.type = "Bipedal";
+	this.attackType = "Ground";
+};
+RobotBattle.Fighters.GroundDrone.prototype = new RobotBattle.Fighters.PlayerClass();
+
+RobotBattle.Fighters.AlphaGround = function() {
+	this.name = "Alpha Ground";
+	this.healthRange = Math.floor(Math.random() * 31) + 50;
+	this.baseDamage += 4;
+};
+RobotBattle.Fighters.AlphaGround.prototype = new RobotBattle.Fighters.GroundDrone();
+
+RobotBattle.Fighters.BetaGround = function() {
+	this.name = "Beta Ground";
+	this.healthRange = Math.floor(Math.random() * 61) + 60;
+	this.baseDamage += 13;
+};
+RobotBattle.Fighters.BetaGround.prototype = new RobotBattle.Fighters.GroundDrone();
+
+// Water  Drone Prototypes
+RobotBattle.Fighters.WaterDrone = function (){
+	this.type = "ATV";
+	this.attackType = "Water";
+};
+RobotBattle.Fighters.WaterDrone.prototype = new RobotBattle.Fighters.PlayerClass();
+
+RobotBattle.Fighters.AlphaWater = function() {
+	this.name = "Alpha Water";
+	this.healthRange = Math.floor(Math.random() * 31) + 50;	
+	this.baseDamage += 6;
+};
+RobotBattle.Fighters.AlphaWater.prototype = new RobotBattle.Fighters.WaterDrone();
+
+RobotBattle.Fighters.BetaWater = function() {
+	this.name = "Beta Water";
+	this.healthRange = Math.floor(Math.random() * 61) + 60;
+	this.baseDamage += 11;
+};
+RobotBattle.Fighters.BetaWater.prototype = new RobotBattle.Fighters.WaterDrone();
+
+
+
+
+
+
 // Functional Requirements
