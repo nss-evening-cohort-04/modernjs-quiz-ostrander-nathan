@@ -5,11 +5,7 @@ RobotBattle.Fighters = {};
 // A base Robot function.
 RobotBattle.Fighters.PlayerClass = function() {
   this.name = "BaseRobot";
-  this.healthBonus = 0;
-  this.strengthBonus = 0;
   this.baseDamage = Math.floor(Math.random() * 10);
-
-
   this.toString = function() {
     return this.name;
   };
@@ -32,14 +28,14 @@ RobotBattle.Fighters.AlphaAerial = function() {
 // To accomplish this, read about the Math.random() function in JavaScript.
 	this.healthRange = Math.floor(Math.random() * 31) + 50;
 // Give each robot model a different range of damage they do using the same technique.
-	this.baseDamage += 10;
+	this.baseDamage += 50;
 };
 RobotBattle.Fighters.AlphaAerial.prototype = new RobotBattle.Fighters.AerialDrone();
 
 RobotBattle.Fighters.BetaAerial = function() {
 	this.name = "Beta Aerial";
 	this.healthRange = Math.floor(Math.random() * 61) + 60;
-	this.baseDamage += 5;
+	this.baseDamage += 45;
 };
 RobotBattle.Fighters.BetaAerial.prototype = new RobotBattle.Fighters.AerialDrone();
 // Ground Drone Prototypes
@@ -52,14 +48,14 @@ RobotBattle.Fighters.GroundDrone.prototype = new RobotBattle.Fighters.PlayerClas
 RobotBattle.Fighters.AlphaGround = function() {
 	this.name = "Alpha Ground";
 	this.healthRange = Math.floor(Math.random() * 31) + 50;
-	this.baseDamage += 4;
+	this.baseDamage += 42;
 };
 RobotBattle.Fighters.AlphaGround.prototype = new RobotBattle.Fighters.GroundDrone();
 
 RobotBattle.Fighters.BetaGround = function() {
 	this.name = "Beta Ground";
 	this.healthRange = Math.floor(Math.random() * 61) + 60;
-	this.baseDamage += 13;
+	this.baseDamage += 33;
 };
 RobotBattle.Fighters.BetaGround.prototype = new RobotBattle.Fighters.GroundDrone();
 
@@ -73,14 +69,14 @@ RobotBattle.Fighters.WaterDrone.prototype = new RobotBattle.Fighters.PlayerClass
 RobotBattle.Fighters.AlphaWater = function() {
 	this.name = "Alpha Water";
 	this.healthRange = Math.floor(Math.random() * 31) + 50;	
-	this.baseDamage += 6;
+	this.baseDamage += 46;
 };
 RobotBattle.Fighters.AlphaWater.prototype = new RobotBattle.Fighters.WaterDrone();
 
 RobotBattle.Fighters.BetaWater = function() {
 	this.name = "Beta Water";
 	this.healthRange = Math.floor(Math.random() * 61) + 60;
-	this.baseDamage += 11;
+	this.baseDamage += 41;
 };
 RobotBattle.Fighters.BetaWater.prototype = new RobotBattle.Fighters.WaterDrone();
 

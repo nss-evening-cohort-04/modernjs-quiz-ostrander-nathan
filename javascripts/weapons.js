@@ -12,7 +12,7 @@ var robotWeapn = {};
 
 robotWeapn.Lazer = function() {
   this.name = "Lazer";
-  this.damage = 4;
+  this.damage = Math.floor(Math.random() * 2) + 10;
 };
 robotWeapn.Lazer.prototype = new Weapon();
 
