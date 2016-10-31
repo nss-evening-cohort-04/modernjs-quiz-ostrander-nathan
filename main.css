@@ -1,0 +1,28 @@
+.allContent {
+	width: auto;
+	margin-top: 20px;
+	display: block;
+	padding: 10px;
+	height: auto;
+	margin-left: 10px;
+}
+#attackButton {
+	background-color: red;
+	margin-left: 40%;
+	margin-bottom: 15px;
+	width: 200px;
+	padding: 20px;
+}
+option {
+	font-size: x-large;
+}
+h2 {
+	text-decoration: underline;
+}
+#robotModels1 {
+	margin: 10px;
+}
+
+input{
+	margin: 10px;
+}

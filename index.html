@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Modern Quiz	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="allContent">
+  <div class="RedTeam">
+    <h4>Type in Name<input type="text" id="txt_nameRed"></h4>
+      <select class="form-control" id="robotModels1">
+    </select>
+    <br>
+  </div>
+  <h2>VS</h2>
+  <div class="BlueTeam">
+
+    <h4>Type in Name<input type="text" id="txt_nameBlue"></h4><br>
+    	<select class="form-control" id="robotModels2">
+    </select>
+    <br>
+  </div>
+  
+  <button id="attackButton" class="btn btn-default" type="submit">Attack</button>
+
+  <div class="panel panel-default" id="outputBattle">
+    <div class="panel-body">Battle Results Here!</div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
+<script src="/javascripts/robotClasses.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="/javascripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
